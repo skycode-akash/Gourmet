@@ -11,10 +11,37 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/app.css">
+    <style>
+        /* img{
+            height: auto;
+            width: auto;
+        } */
+        .logo-main{
+            height:15vh;
+            width: auto;
+        }
+        .cart-nav{
+            height:5vh;
+            width: auto;   
+        }
+</style>
 </head>
 
 <body>
-    <h1>hello from home page</h1>
+    <nav class="container mx-auto flex items-center justify-between py-2">
+        <div>
+            <img class="logo-main" src="/img/Gourmet.jpg" alt="logo">
+        </div>
+        <div>
+            <ul class="flex items-center">
+                <li class="mr-7"><a href="#">Manu</a></li>
+                <li class="mr-7"><a href="#">Offers</a></li>
+                <li class="mr-7"><a href="#">Register</a></li>
+                <li class="mr-7"><a href="#">Login</a></li>
+                <li class="mr-7"><a href="#"><img class="cart-nav" src="/img/Cart2.jpg" alt="cart"></a></li>
+            </ul>
+        </div>
+    </nav>
     <script src="/js/app.js"></script>
 </body>
 
