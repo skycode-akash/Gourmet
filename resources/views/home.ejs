@@ -5,44 +5,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gourmet</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300;400;600;700&display=swap" rel="stylesheet"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/app.css">
     <style>
-        /* img{
-            height: auto;
-            width: auto;
+        /* .body-hero{
+            width: 90%;
+            margin: auto;
         } */
-        .logo-main{
-            height:15vh;
+
+        .logo-main {
+            height: 15vh;
             width: auto;
         }
-        .cart-nav{
-            height:5vh;
-            width: auto;   
+
+        .cart-nav {
+            height: 5vh;
+            width: auto;
         }
-</style>
+
+        .cart-nav:hover {
+            transition-duration: 0.1s;
+            transform: rotate(-16deg);
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="container mx-auto flex items-center justify-between py-2">
-        <div>
-            <img class="logo-main" src="/img/Gourmet.jpg" alt="logo">
-        </div>
-        <div>
-            <ul class="flex items-center">
-                <li class="mr-7"><a href="#">Manu</a></li>
-                <li class="mr-7"><a href="#">Offers</a></li>
-                <li class="mr-7"><a href="#">Register</a></li>
-                <li class="mr-7"><a href="#">Login</a></li>
-                <li class="mr-7"><a href="#"><img class="cart-nav" src="/img/Cart2.jpg" alt="cart"></a></li>
-            </ul>
-        </div>
-    </nav>
-    <script src="/js/app.js"></script>
+    <div class="body-hero">
+        <nav class="container mx-auto flex items-center justify-between py-2">
+            <div>
+                <img class="logo-main" src="/img/Gourmet.jpg" alt="logo">
+            </div>
+            <div>
+                <ul class="flex items-center">
+                    <li class="mr-7"><a href="#">Manu</a></li>
+                    <li class="mr-7"><a href="#">Offers</a></li>
+                    <li class="mr-7"><a href="#">Register</a></li>
+                    <li class="mr-7"><a href="#">Login</a></li>
+                    <li class="mr-7"><a href="#"><img class="cart-nav" src="/img/Cart2.jpg" alt="cart"></a></li>
+                </ul>
+            </div>
+        </nav>
+        <section class="hero py-16">
+            <div class="container mx-auto flex items-center justify-between">
+                <div class="w-1/2">
+                    <h6 class="text-lg"><em>Are you hungry?</em></h6>
+                    <h1 class="text-6xl font-bold">Don't wait!</h1>
+                </div>
+                <div class="w-1/2">
+                    <img src="/img/pizza/img/hero-pizza.png" alt="hero-pizza">
+                </div>
+            </div>
+        </section>
+
+        <section class="menu container mx-auto py-8">
+            <h1>All pizza</h1>
+        </section>
+
+        <script src="/js/app.js"></script>
+    </div>
 </body>
 
 </html>
