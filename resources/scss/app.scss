@@ -2,7 +2,8 @@
 
 body{
     // font-family: 'Mali', Verdana, sans-serif;
-    font-family: 'Balsamiq Sans', cursive;
+    // font-family: 'Balsamiq Sans', cursive;
+    font-family: 'Lato', sans-serif;
     -webkit-font-smoothing: antialiased;
     color: $dark;
 }
@@ -27,4 +28,26 @@ nav li a{
 
 section.hero{
     background: $secondary;
+    border-radius: 9px;
 }
+
+.size{
+    background: $secondary;
+}
+
+// .card{
+//     background-color: $card;
+// }
+
+.add-to-cart{
+    border: 2px solid $primary;
+    color: $primary;
+    transition: $smooth;
+    &:hover{
+        background: $primary;
+        border-color: $pure;
+        color: $pure;
+    }
+}
+
+

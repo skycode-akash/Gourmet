@@ -1,5 +1,5 @@
 body {
-  font-family: "Balsamiq Sans", cursive;
+  font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #232323;
 }
@@ -22,4 +22,20 @@ nav li a:hover {
 
 section.hero {
   background: #d6d6d6;
+  border-radius: 9px;
+}
+
+.size {
+  background: #d6d6d6;
+}
+
+.add-to-cart {
+  border: 2px solid #fe5f1e;
+  color: #fe5f1e;
+  transition: all 0.1s ease-in-out;
+}
+.add-to-cart:hover {
+  background: #fe5f1e;
+  border-color: #fff;
+  color: #fff;
 }
