@@ -20,9 +20,24 @@ nav li a:hover {
   color: #fe5f1e;
 }
 
+.logo-main {
+  height: 15vh;
+  width: auto;
+}
+
+.cart-nav {
+  height: 5vh;
+  width: auto;
+}
+
+.cart-nav:hover {
+  transition-duration: 0.1s;
+  transform: rotate(-18deg);
+}
+
 section.hero {
   background: #d6d6d6;
-  border-radius: 9px;
+  border-radius: 10px;
 }
 
 .size {
@@ -38,4 +53,16 @@ section.hero {
   background: #fe5f1e;
   border-color: #fff;
   color: #fff;
+}
+
+.btn-primary {
+  background: #fe5f1e;
+  transition: all 0.1s ease-in-out;
+}
+.btn-primary:hover {
+  background: #a83c11;
+}
+
+section.cart .amount {
+  color: #fe5f1e;
 }

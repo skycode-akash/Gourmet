@@ -26,9 +26,24 @@ nav li a{
     }
 }
 
+.logo-main {
+    height: 15vh;
+    width: auto;
+}
+
+.cart-nav {
+    height: 5vh;
+    width: auto;
+}
+
+.cart-nav:hover {
+    transition-duration: 0.1s;
+    transform: rotate(-18deg);
+}
+
 section.hero{
     background: $secondary;
-    border-radius: 9px;
+    border-radius: 10px;
 }
 
 .size{
@@ -47,6 +62,20 @@ section.hero{
         background: $primary;
         border-color: $pure;
         color: $pure;
+    }
+}
+
+.btn-primary{
+    background: $primary;
+    transition: $smooth;
+    &:hover{
+        background: $primary-hover;
+    }
+}
+
+section.cart{
+    .amount{
+        color: $primary;
     }
 }
 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300;400;600;700&display=swap" rel="stylesheet"> -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/app.css">
+    <style>
+        /* .body-hero{
+            width: 90%;
+            margin: auto;
+        } */
+
+        /* .logo-main {
+            height: 15vh;
+            width: auto;
+        }
+
+        .cart-nav {
+            height: 5vh;
+            width: auto;
+        }
+
+        .cart-nav:hover {
+            transition-duration: 0.1s;
+            transform: rotate(-16deg);
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="body-hero mx-6">
+
+        <nav class="container mx-auto flex items-center justify-between py-2">
+            <div>
+                <img class="logo-main" src="/img/Gourmet.jpg" alt="logo">
+            </div>
+            <div>
+                <ul class="flex items-center">
+                    <li class="mr-7"><a href="#">Menu</a></li>
+                    <li class="mr-7"><a href="#">Offers</a></li>
+                    <li class="mr-7"><a href="#">Register</a></li>
+                    <li class="mr-7"><a href="#">Login</a></li>
+                    <li class="mr-7"><a href="#"><img class="cart-nav" src="/img/Cart2.jpg" alt="cart"></a></li>
+                </ul>
+            </div>
+        </nav>
+       
+        <%- body %>
+      
+        <!-- <footer>add this later</footer> -->
+
+        <script src="/js/app.js"></script>
+    </div>
+</body>
+
+</html>
