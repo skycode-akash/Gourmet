@@ -9,11 +9,20 @@
 [+] git setup & first commit
 [+] install laravel
     - setup js & scss
-[-] install tailwind css
-[-] create home page using html and css
-[-] create cart page
+[+] install tailwind css
+[+] create home page using html and css
+[+] create cart page
     - order summary section
     - empty cart section
+[+] move routes to routes file
+[+] create dedicated controller
+[-] add to cart func
+    - connect mongo DB
+    - use connect-mongo for session store
+        -dependancies
+            -mangoose, express-session, connect-mongo, dotenv
+    - axios to send ajax request
+    - install notification library npm i noty   https://ned.im/noty/#/
 [-] create order controller and link it in server.js
 [-] create order view with table for customer and admin
 [-] create order single page with status
