@@ -4,13 +4,20 @@ const ejs = require('ejs')
 const path = require('path')
 const expressLayout = require('express-ejs-layouts')
 const PORT = process.env.PORT || 3000
-// const mongoose = require('mongoose')
+const mongoose = require('mongoose')
+
+
+// mongoose.connect('mongodb://127.0.0.1/Gourmet');
+// const connection = mongoose.connection;
+
+// mongoose.connection.once('open',() => {
+//     console.log("Database connected");
+// })
 
 
 //thapa 
-// mongoose.connect("mongodb://localhost:2017/Gourmet", {
-//     useNewUrlParser: true, useUnifiedTopology: true 
-// }) 
+// mongoose.connect("mongodb://127.0.0.1/Gourmet", {
+//     useNewUrlParser: true, useUnifiedTopology: true})
 // .then( () => console.log("connection successful..."))
 // .catch((err) => console.log(err));
 // const connection = mongoose.connection;
@@ -25,20 +32,19 @@ const PORT = process.env.PORT || 3000
 
 
 //database connection
-// const url = 'mongodb://localhost:27017/Gourmet'
-// mongoose.connect(url, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true, useFindAndModify: true});
-// const connection = mongoose.connection;
-// connection.once('open', () => {
-// console.log('database connected...');
-// }).catch(err => {
-//     console.log('connection failed...');
-// })
-
+const url = 'mongodb://localhost/Gourmet'
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true});
+const connection = mongoose.connection;
+connection.once('open', () => {
+console.log('database connected...');
+})
 
 //check conn
-// require('./server.js'); // which executes 'mongoose.connect()'
-// console.log(mongoose.connection.readyState);
+require('./server.js'); // which executes 'mongoose.connect()'
+console.log(mongoose.connection.readyState);
 
+
+//a coonection ati thva deto..jovade
 
 // Assets
 app.use(express.static('public'))

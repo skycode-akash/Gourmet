@@ -17,6 +17,8 @@
 [+] move routes to routes file
 [+] create dedicated controller
 [-] add to cart func
+[+] fetch pizza from db and show on home page
+[+] create menu model and put dummy data
     - connect mongo DB
     - use connect-mongo for session store
         -dependancies
