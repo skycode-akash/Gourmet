@@ -38,7 +38,7 @@ nav li a{
 
 .cart-nav:hover {
     transition-duration: 0.1s;
-    transform: rotate(-18deg);
+    transform: rotate(-10deg);
 }
 
 #cart-img{
@@ -50,10 +50,11 @@ nav li a{
     border: 3px solid #ec571c;
     &:hover{
         background-color: #fff;
-        // color: #a83c11;
+        color: #e6541b;
         border: 3px solid #a83c11;
         transition: $smooth;
-        border-radius: 6px;       
+        border-radius: 6px;
+        filter: brightness(95%)
     }
 }
 

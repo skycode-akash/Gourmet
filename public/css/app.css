@@ -32,7 +32,7 @@ nav li a:hover {
 
 .cart-nav:hover {
   transition-duration: 0.1s;
-  transform: rotate(-18deg);
+  transform: rotate(-10deg);
 }
 
 #cart-img {
@@ -45,9 +45,11 @@ nav li a:hover {
 }
 #cart-img:hover {
   background-color: #fff;
+  color: #e6541b;
   border: 3px solid #a83c11;
   transition: all 0.1s ease-in-out;
   border-radius: 6px;
+  filter: brightness(95%);
 }
 
 section.hero {
