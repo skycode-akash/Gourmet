@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
 const ejs = require('ejs')
@@ -5,6 +6,9 @@ const path = require('path')
 const expressLayout = require('express-ejs-layouts')
 const PORT = process.env.PORT || 3000
 const mongoose = require('mongoose')
+const session = require('express-session')
+const flash = require('express-flash')
+
 
 
 // mongoose.connect('mongodb://127.0.0.1/Gourmet');
@@ -44,7 +48,17 @@ require('./server.js'); // which executes 'mongoose.connect()'
 console.log(mongoose.connection.readyState);
 
 
-//a coonection ati thva deto..jovade
+//session config
+app.use(session({
+    secret: process.env.COOKIE_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    // store: mongoStore,
+    cookie: { maxAge: 1000 * 60 * 60 * 24}
+}))
+
+app.use(flash())
+
 
 // Assets
 app.use(express.static('public'))
