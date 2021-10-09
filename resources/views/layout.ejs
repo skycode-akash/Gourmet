@@ -58,7 +58,7 @@
                     <li class="mr-7"><a href="/login">Login</a></li>
                     <li class="mr-7"><a href="/cart" class="flex items-center" id="cart-img">
                         <img class="cart-nav" src="/img/Cart2.jpg" alt="cart">
-                        <span id="cartCounter" class="font-bold pl-2 pr-1">0</span>
+                        <span id="cartCounter" class="font-bold pl-2 pr-1"><%= session.cart ? session.cart.totalQty : '' %></span>
                     </a></li>
                 </ul>
             </div>
