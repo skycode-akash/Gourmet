@@ -23,6 +23,8 @@ function initRoutes(app) {
     // (req, res) => {
     //     res.render('auth/register')
     // }
+
+    app.post('/update-cart', cartController().update)
 }
 
 module.exports = initRoutes

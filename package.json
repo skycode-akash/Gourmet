@@ -13,6 +13,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.22.0",
     "connect-mongo": "^4.6.0",
     "cross-env": "^7.0.3",
     "dotenv": "^10.0.0",

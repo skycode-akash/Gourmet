@@ -35,6 +35,21 @@ nav li a:hover {
   transform: rotate(-18deg);
 }
 
+#cart-img {
+  padding: 4px;
+  padding-left: 15px;
+  padding-right: 10px;
+  color: #fe5f1e;
+  border-radius: 15px;
+  border: 3px solid #ec571c;
+}
+#cart-img:hover {
+  background-color: #fff;
+  border: 3px solid #a83c11;
+  transition: all 0.1s ease-in-out;
+  border-radius: 6px;
+}
+
 section.hero {
   background: #d6d6d6;
   border-radius: 10px;

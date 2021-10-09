@@ -75,7 +75,7 @@ app.use(session({
         mongoUrl: process.env.MONGO_CONNECTION_URL
     }),
     saveUninitialized: false,
-    cookie: { maxAge: 1000 * 60 * 60 * 24 }
+    cookie: { maxAge: 1000 * 60 * 60 * 24 } //24hr
 }))
 
 app.use(flash())
@@ -83,6 +83,7 @@ app.use(flash())
 
 // Assets
 app.use(express.static('public'))
+app.use(express.json())
 
 // set template engine
 app.use(expressLayout)
