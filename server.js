@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000
 const mongoose = require('mongoose')
 const session = require('express-session')
 const flash = require('express-flash')
-
+const MongoDbStore = require('connect-mongo')
 
 
 // mongoose.connect('mongodb://127.0.0.1/Gourmet');
@@ -36,25 +36,46 @@ const flash = require('express-flash')
 
 
 //database connection
-const url = 'mongodb://localhost/Gourmet'
-mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true});
+// const url = 'mongodb://localhost/Gourmet'
+mongoose.connect(process.env.MONGO_CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 const connection = mongoose.connection;
 connection.once('open', () => {
-console.log('database connected...');
+    console.log('database connected...');
 })
+// .catch(err => {
+//     console.log('connection failed...')
+// })
+
+// const url = 'mongodb://localhost/Gourmet'
+// mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true});
+// const connection = mongoose.connection;
+// connection.once('open', () => {
+// console.log('database connected...');
+// })
+
+
 
 //check conn
 require('./server.js'); // which executes 'mongoose.connect()'
 console.log(mongoose.connection.readyState);
 
 
+//session store
+// let mongoStore = new MongoDbStore({
+//     mongooseConnection: connection,
+//     collection: 'sessions'
+// })
+
+
 //session config
 app.use(session({
     secret: process.env.COOKIE_SECRET,
     resave: false,
+    store: MongoDbStore.create({
+        mongoUrl: process.env.MONGO_CONNECTION_URL
+    }),
     saveUninitialized: false,
-    // store: mongoStore,
-    cookie: { maxAge: 1000 * 60 * 60 * 24}
+    cookie: { maxAge: 1000 * 60 * 60 * 24 }
 }))
 
 app.use(flash())
