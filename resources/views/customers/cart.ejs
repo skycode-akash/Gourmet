@@ -1,12 +1,29 @@
 <section class="cart hero py-16">
 
+    <% if(session.cart) { %>
+    <!-- order summary  -->
     <div class="order container mx-auto w-1/2">
         <div class="flex items-center border-b-2 border-gray-400 pb-4 px-5">
             <img class="h-14 rounded-2xl" src="/img/cart-fill-b.jpg" alt="inCart">
             <h1 class="font-bold ml-4 text-2xl">Order Summary</h1>
         </div>
+
+        <!-- items  -->
         <div class="pizza-list border-b-2 border-gray-400 ">
+            <!-- items v-down-v -->
+            <% for(let pizza of Object.values(session.cart.items)) {  %>
             <div class="flex items-center my-8">
+                <img class="w-24" src="/img/<%= pizza.item.image %>" alt="pizza-img">
+                <div class="ml-4 flex-1">
+                    <h1><%= pizza.item.name %></h1>
+                    <span><%= pizza.item.size %></span>
+                </div>
+                <span class="flex-1"><%= pizza.qty %></span>
+                <span class="font-bold text-lg">₹<%= pizza.item.price * pizza.qty %></span>
+            </div>
+            <% } %>
+
+            <!-- <div class="flex items-center my-8">
                 <img class="w-24" src="/img/cartpizza.png" alt="pizza-img">
                 <div class="ml-4 flex-1">
                     <h1>Marinara</h1>
@@ -24,49 +41,49 @@
                 </div>
                 <span class="flex-1">1 pcs</span>
                 <span class="font-bold text-lg">₹300</span>
-            </div>
-
-            <div class="flex items-center my-8">
-                <img class="w-24" src="/img/cartpizza.png" alt="pizza-img">
-                <div class="ml-4 flex-1">
-                    <h1>Marinara</h1>
-                    <span>MEDIUM</span>
-                </div>
-                <span class="flex-1">1 pcs</span>
-                <span class="font-bold text-lg">₹300</span>
-            </div>
+            </div> -->
+            <!-- items ^-up-^ -->
         </div>
+
+        <!-- Total -->
         <div class="text-right py-4">
             <div>
                 <span class="text-lg font-bold">Total Amount</span>
-                <span class="amount text-2xl font-bold ml-2">₹900</span>
+                <span class="amount text-2xl font-bold ml-2">₹<%= session.cart.totalPrice %></span>
             </div>
             <div>
                 <form action="" class="mt-12">
-                    <input class="border border-gray-400 p-2 w-1/2 mb-4" type="text" pattern="[0-9]" placeholder="Phone Number">
+                    <input class="border border-gray-400 p-2 w-1/2 mb-4" type="text" pattern="[0-9]"
+                        placeholder="Phone Number">
                     <input class="border border-gray-400 p-2 w-1/2" type="text" placeholder="Address">
                     <div>
-                        <button class="mt-6 btn-primary px-6 py-2 rounded-full text-white font-bold" type="submit">Order Now</button>
+                        <button class="mt-6 btn-primary px-6 py-2 rounded-full text-white font-bold" type="submit">Order
+                            Now</button>
                     </div>
                 </form>
             </div>
-            <a href="" class="inline-block cursor-pointer px-6 py-2 btn-primary rounded-full text-white font-bold mt-6">Login to continue</a>
+            <a href=""
+                class="inline-block cursor-pointer px-6 py-2 btn-primary rounded-full text-white font-bold mt-6">Login
+                to continue</a>
         </div>
     </div>
+    <% } else { %>
 
-    <!-- <div class="empty-cart">
+    <!-- empty cart -->
+    <div class="empty-cart">
         <div class="container mx-auto text-center h-full">
-            <h1 class="text-3xl font-bold mb-2 pt-7"> Cart Empty 🙁</h1>
+            <h1 class="text-3xl font-bold mb-2"> Cart Empty 🙁</h1>
             <p class="text-gray-800 text-lg">You probably have not ordered a pizza yet. <br> To order a pizza, go to the
                 main page.</p>
-            <div class="pt-7 pb-14">
+            <div class="pt-5 pb-2">
                 <img class="mx-auto rounded-xl h-80" src="/img/Screenshot.png" alt="empty-cart">
                 <a href="/" class="mt-7 inline-block px-6 py-2 rounded-full btn-primary text-white font-bold ">Go
                     Back</a>
             </div>
 
         </div>
-    </div> -->
+    </div>
+    <% } %>
 
 
 </section>

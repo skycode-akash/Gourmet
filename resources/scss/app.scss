@@ -1,4 +1,6 @@
 @import './_variables.scss';
+@import '~noty/src/noty.scss';
+@import '~noty/src/themes/mint.scss';
 
 body{
     // font-family: 'Mali', Verdana, sans-serif;
@@ -80,6 +82,9 @@ section.hero{
         border-color: $pure;
         color: $pure;
     }
+    &:focus{
+        outline: none;
+    }
 }
 
 .btn-primary{
@@ -104,5 +109,16 @@ section.login{
             color: $primary-hover;
         }
     }
+}
+
+.noty_theme__mint {
+    border-radius: 50px!important;
+    padding-left: 8px!important;
+    // background-color:rgb(79, 150, 60, 0.9)!important;
+    // background-color:rgba(106, 177, 85, 1)!important;
+    // background-color: #85cc6f!important;
+    color:#222!important;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 

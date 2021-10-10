@@ -1,3 +1,5 @@
+const {json} = require("express")
+
 function cartController() {
     return {
         index(req, res) {
@@ -6,6 +8,7 @@ function cartController() {
         update(req, res) {
             // let cart = {
             //     items: {
+            //         pizzaId: { item: pizzaObject, qty: 0}
             //         pizzaId: { item: pizzaObject, qty: 0}
             //     },
             //     totalQty: 0,
