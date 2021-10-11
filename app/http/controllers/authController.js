@@ -13,7 +13,7 @@ function authController() {
         async postRegister(req, res) {
             const { name, email, password } = req.body
 
-            // valodate request
+            // validate request
             if(!name || !email || !password) {
                 req.flash('error', 'All fields are required')
                 req.flash('name', name)
@@ -36,12 +36,13 @@ function authController() {
 
             //create user
             const user = new User({
-                name,
-                email,
+                name: name,
+                email: email,
                 password: hashedPassword
             })
 
             user.save().then((user) => {
+                // login
                 return res.redirect('/')
             }).catch(err => {
                 req.flash('error', 'something went wrong!')
