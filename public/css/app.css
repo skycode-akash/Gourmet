@@ -381,3 +381,156 @@ section.login a:hover {
   font-weight: bold;
   letter-spacing: 1px;
 }
+
+a.link {
+  color: #fe5f1e;
+}
+
+section.status {
+  min-height: calc(100vh - 170px);
+}
+
+.status-box {
+  padding: 60px 0 0;
+}
+
+.status-box ul li span {
+  position: relative;
+  padding-left: 20px;
+}
+
+.status-box ul {
+  margin-left: 84px;
+}
+
+.status-box ul li .status-box ul li {
+  position: relative;
+}
+
+.status-box ul li span:after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  background: #232323;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 0 1px 10px #d6d6d6;
+}
+
+.status-box ul li span:before {
+  font-family: "Line Awesome Free";
+  font-size: 46px;
+  font-weight: 600;
+  position: absolute;
+  left: -90px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: inherit;
+}
+
+.status-box ul li:nth-child(1) span:before {
+  content: "\f46c";
+}
+
+.status-box ul li:nth-child(2) span:before {
+  content: "\f560";
+}
+
+.status-box ul li:nth-child(3) span:before {
+  content: "\f818";
+}
+
+.status-box ul li:nth-child(4) span:before {
+  content: "\f0d1";
+}
+
+.status-box ul li:nth-child(5) span:before {
+  content: "\f582";
+}
+
+.status-box ul li {
+  position: relative;
+}
+
+.status-box ul li:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -6px;
+  width: 2px;
+  height: 100%;
+  background: #232323;
+  margin-top: 10px;
+}
+
+.status-box ul li:nth-child(5) span:after {
+  box-shadow: 0 20px 1px 20px #d6d6d6;
+}
+
+.status-box ul li.step-completed:before {
+  background: #fe5f1e;
+}
+
+.status-box ul li.step-completed span:after {
+  background: #fe5f1e;
+}
+
+.status-box ul li.step-completed span {
+  color: #fe5f1e;
+}
+
+.status-box ul li.current span {
+  color: #fe5f1e;
+  color: #249213;
+  font-weight: bold;
+  font-size: 125%;
+}
+
+.status-box ul li.current span:after {
+  background: #249213;
+}
+
+.status-box ul li small {
+  float: right;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+@media (max-width: 1060px) {
+  .container {
+    max-width: 90%;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 760px) {
+  .logo-main {
+    max-height: 65px;
+  }
+}
+@media (max-width: 630px) {
+  .logo-main {
+    max-height: 30px;
+  }
+
+  .cart-nav {
+    max-height: 10px;
+  }
+}
+@media (max-width: 900px) {
+  .cart-nav {
+    max-height: 30px;
+  }
+}
+@media (max-width: 800px) {
+  .cart-nav {
+    max-height: 20px;
+  }
+}

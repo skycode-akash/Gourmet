@@ -16,7 +16,7 @@
     - empty cart section
 [+] move routes to routes file
 [+] create dedicated controller
-[-] add to cart func
+[+] add to cart func
 [+] fetch pizza from db and show on home page
 [+] create menu model and put dummy data
     - connect mongo DB
@@ -27,14 +27,23 @@
     - install notification library npm i noty   https://ned.im/noty/#/
 [+] create login page with route
 [+] create register page  with route
-[-] build register crud
+[+] build register crud
     - dependancies express-flash express-session dotenv
     - status code https://www.restapitutorial.com/httpstatuscodes.html
-[-] build login using passport
+[+] build login using passport
     - install dependancies passport passport-local express-session
-[-] create order controller and link it in server.js
-[-] create order view with table for customer and admin
-[-] create order single page with status
-[-] create register crud
+[+] create order controller and link it in server.js
+[+] create order view with table for customer and admin
+[+] place order functionality
+[+] show all order on customer orders page
+[+] show order on admin order page
+[+] change order status
+[+] create order single page with status
+[+] order tracker
+[+] socket connection
+    - dependancies socket.io
+[-] build project for deploy
+[-] deployproject on live server  
+
 
     

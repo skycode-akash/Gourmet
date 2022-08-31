@@ -2,7 +2,7 @@
     <div class="container mx-auto flex items-center justify-between content-center">
         <div class="w-1/2 ml-12">
             <h6 class="text-xl tracking-wide ml-2"><em>Are you hungry ?</em></h6>
-            <h1 class="text-7xl font-bold">Don't wait!</h1>
+            <h1 class="text-3xl md:text-7xl font-bold">Don't wait!</h1>
             <button class="px-6 py-2 rounded-full text-white font-bold mt-4 tracking-wider btn-primary">Order
                 Now</button>
         </div>
@@ -11,15 +11,14 @@
         </div>
     </div>
 </section>
-
 <section class="menu container mx-auto py-8">
     <div class="mx-12">
         <!-- by me. extra for good padding/margin -->
         <h1 class="text-2xl font-bold mb-12">All pizza</h1>
-        <div class="grid grid-cols-4 gap-x-12 gap-y-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-12 gap-y-20">
 
             <% pizzas.forEach(function(pizza) { %>
-                <div class="w-64">
+                <div class="w-full md:w-64">
                     <img class="h-40 mb-4 mx-auto" src="/img/<%= pizza.image %>" alt="pizza">
                     <div class="text-center">
                         <h2 class="mb-4 text-lg"><%= pizza.name %></h2>

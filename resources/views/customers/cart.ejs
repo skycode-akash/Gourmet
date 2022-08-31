@@ -2,7 +2,7 @@
 
     <% if(session.cart) { %>
     <!-- order summary  -->
-    <div class="order container mx-auto w-1/2">
+    <div class="order container mx-auto xl:w-1/2">
         <div class="flex items-center border-b-2 border-gray-400 pb-4 px-5">
             <img class="h-14 rounded-2xl" src="/img/cart-fill-b.jpg" alt="inCart">
             <h1 class="font-bold ml-4 text-2xl">Order Summary</h1>
@@ -51,20 +51,24 @@
                 <span class="text-lg font-bold">Total Amount</span>
                 <span class="amount text-2xl font-bold ml-2">₹<%= session.cart.totalPrice %></span>
             </div>
+
+            <% if(user) { %>
             <div>
-                <form action="" class="mt-12">
-                    <input class="border border-gray-400 p-2 w-1/2 mb-4" type="text" pattern="[0-9]"
+                <form action="/orders" method="POST" class="mt-12">
+                    <input name="phone" class="border border-gray-400 p-2 w-1/2 mb-4" type="text" pattern="[7896][0-9]{9}"
                         placeholder="Phone Number">
-                    <input class="border border-gray-400 p-2 w-1/2" type="text" placeholder="Address">
+                    <input name="address" class="border border-gray-400 p-2 w-1/2" type="text" placeholder="Address">
                     <div>
                         <button class="mt-6 btn-primary px-6 py-2 rounded-full text-white font-bold" type="submit">Order
                             Now</button>
                     </div>
                 </form>
             </div>
-            <a href=""
+            <% } else { %>
+            <a href="/login"
                 class="inline-block cursor-pointer px-6 py-2 btn-primary rounded-full text-white font-bold mt-6">Login
                 to continue</a>
+                <% } %>
         </div>
     </div>
     <% } else { %>
